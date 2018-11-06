@@ -82,7 +82,8 @@ Por lo que el servidor está respondiendo con una dirección IP pública.
 7. Hasta la trama 45 se puede observar una secuencia de tramas del
 protocolo STUN.
 * ¿Por qué se hace uso de este protocolo?
-    Porque STUN es usado principalmente por teléfonos(para llamadas SIP). Es un protocolo de red del tipo cliente/servidor que permite a clientes NAT encontrar su dirección IP pública.
+Si el usuario con el que queremos contactar está tras una red NAT utilizaremos el protocolo STUN, gracias al cual podemos saber su direccion IP pública además del tipo de NAT en el que se encuentra y el puerto de internet asociado con el puerto local a través de NAT.
+    Es un protocolo de red del tipo cliente/servidor.
 * ¿Podrı́as decir si estamos tras un NAT o no?
 Sí, estamos tras un NAT porque se está usando el protocolo STUN.
 
@@ -145,7 +146,8 @@ No, no se utilizan bits de padding ya que este campo aparece como Falso.
 captura es en destino)?
 La periocidad de los paquetes es de 0.02 segundos aproximadamente.
 * ¿Cuántos bits/segundo se envı́an?
-8000 bytes/segundos.
+8000 bytes/segundos. 
+(bits totales que envio: 214 - (16+16+16+6) = 214 - 54 = 160 bytes , 160 bits/0.02 segundos = 8000 bytes/segundo que serían 64Kbps)
 
 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
@@ -158,14 +160,17 @@ Hay dos flujos, uno para video y otro para audio.
 No se pierde ningún paquete.(0.0 %Lost)
 * ¿Cuál es el valor máximo del delta? ¿Y qué es lo que significa el
 valor de delta?
-El valor máximo de la delta de uno de los flujos es 1290.444 y el del otro flujo es 1290.479. El valor máximo de la delta se refiere al retardo que sufre un paquete.
+El valor máximo de la delta del flujo de audio es 1290.444.
+El valor máximo de la delta del flujo de video es 1290.479. 
+El valor máximo de la delta se refiere al retardo que sufre un paquete.
 * ¿Cuáles son los valores de jitter (medio y máximo)? ¿Qué
 quiere decir eso? ¿Crees que estamos ante una conversación de
 calidad?
-Los valores de jitter para un jitter son Max 119.635 y Mean 42.500. (Este es el audio)
-Los valores para el otro flujo son Max 183.096 y Mean 153.240. (Este el el video)
+Los valores de jitter para el flujo de audio son Max 119.635 y Mean 42.500. 
+Los valores de jitter para el flujo de video son Max 183.096 y Mean 153.240.
 El jitter es un parámetro para determinar el tiempo de transmisión de los paquetes.
-Estamos ante una conversación de calidad por los valores de jitter del audio.
+Con un jitter alto la conversación será de mala calidad.
+Si nos fijamos en los valores máximo y mínimo del jitter del flujo de audio observamos que oscila desde 119.635 ms a 42.500 ms. Por lo tanto podemos decir que es una conversación de calidad.
 
 13. Elige un paquete RTP de audio. Analiza el flujo de audio en Telephony
 -> RTP -> Stream Analysis.
@@ -178,7 +183,7 @@ Sí, porque si nos situamos en el primer paquete de RTP vemos que comenzamos a c
 dado. ¿Cuál?
 Hata el paquete 246. A partir del 247 son mayores.
 * ¿A qué se debe el cambio tan brusco del jitter?
-Es porque el valor de la delta (retardo) cambia de 24..03 ms a 554.74 ms.
+Es porque el valor de la delta (retardo) cambia de 24.03 a 554.74 ms.
 * ¿Es comparable el cambio en el valor de jitter con el del delta?
 ¿Cual es más grande?
 Sí, el valor del retardo aumenta respecto al paquete anterior. 
@@ -189,8 +194,7 @@ esa llamada y pulsa el botón Graph.
 * ¿Cuánto dura la conversación?
 La conversación dura 24.80289 segundos (39.229683 - 14.426793 = 24.80289 s).
 * ¿Cuáles son sus SSRC? ¿Por qué hay varios SSRCs? ¿Hay CSRCs?
-    H.261 (video) aparece como SSRC: Synchronization Source identifier: 0x43306582 (1127245186)
-    G.711 (audio) tenemos Synchronization Source identifier: 0xbf4afd37 (3209362743)
+    H.261 (video) | G.711 (audio)
     Hay varios SSRC porque hay dos flujos (uno de video y otro de audio).
     No hay CSRCs, ya que el campo Contributing source identifiers count está a cero.
 
