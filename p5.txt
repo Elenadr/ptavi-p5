@@ -77,12 +77,14 @@ El servidor devuelve: HTTP/1.1 200 OK.
 vamos a la misma URL, ¿qué recibimos? ¿Qué es, entonces, lo
 que está respondiendo el servidor?
 Si lanzamos en Mozilla recibimos la siguiente dirección IP: 212.128.254.147.
-P or lo que el servidor está respondiendo con una dirección IP pública. 
+Por lo que el servidor está respondiendo con una dirección IP pública. 
 
 7. Hasta la trama 45 se puede observar una secuencia de tramas del
 protocolo STUN.
 * ¿Por qué se hace uso de este protocolo?
+    Porque STUN es usado principalmente por teléfonos(para llamadas SIP). Es un protocolo de red del tipo cliente/servidor que permite a clientes NAT encontrar su dirección IP pública.
 * ¿Podrı́as decir si estamos tras un NAT o no?
+Sí, estamos tras un NAT porque se está usando el protocolo STUN.
 
 8. La trama 46 es la primera trama SIP. En un entorno como el de Internet, lo habitual es desconocer la dirección IP de la otra parte al
 realizar una llamada. Por eso, todo usuario registra su localización en
