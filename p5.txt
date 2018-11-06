@@ -153,12 +153,19 @@ La periocidad de los paquetes es de 0.02 segundos aproximadamente.
 12. Vamos a ver más a fondo el intercambio RTP. En Telephony hay una
 opción RTP. Empecemos mirando los flujos RTP.
 * ¿Cuántos flujos hay? ¿por qué?
+Hay dos flujos, uno para video y otro para audio.
 * ¿Cuántos paquetes se pierden?
+No se pierde ningún paquete.(0.0 %Lost)
 * ¿Cuál es el valor máximo del delta? ¿Y qué es lo que significa el
 valor de delta?
+El valor máximo de la delta de uno de los flujos es 1290.444 y el del otro flujo es 1290.479. El valor máximo de la delta se refiere al retardo que sufre un paquete.
 * ¿Cuáles son los valores de jitter (medio y máximo)? ¿Qué
 quiere decir eso? ¿Crees que estamos ante una conversación de
 calidad?
+Los valores de jitter para un jitter son Max 119.635 y Mean 42.500. (Este es el audio)
+Los valores para el otro flujo son Max 183.096 y Mean 153.240. (Este el el video)
+El jitter es un parámetro para determinar el tiempo de transmisión de los paquetes.
+Estamos ante una conversación de calidad por los valores de jitter del audio.
 
 13. Elige un paquete RTP de audio. Analiza el flujo de audio en Telephony
 -> RTP -> Stream Analysis.
