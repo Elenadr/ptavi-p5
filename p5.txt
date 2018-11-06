@@ -106,12 +106,16 @@ Entiende instrucciones CANCEL, MESSAGE, REFER, INVITE, ACK, NOTIFY, OPTIONS, BYE
 
 9. Fijémonos en las tramas siguientes a la número 46:
 * ¿Se registra con éxito en el primer intento?
+No, no se registra con éxito.
 * ¿Cómo sabemos si el registro se ha realizado correctamente o no?
+Sabemos que ha sido un éxito si nos llega 200 OK.
 * ¿Podrı́as identificar las diferencias entre el primer intento y el
 segundo de registro? (fı́jate en el tamaño de los paquetes y mira
 a qué se debe el cambio)
+El primer intento tiene una longitud de 523 bytes. Y el segundo de 712. EL segundo intento tiene una mayor cantidad de bytes porque se le añade la autorización para poder registrarse.
 * ¿Cuánto es el valor del tiempo de expiración de la sesión? Indica
 las unidades.
+El tiempo de expiración de la sesión es 3600 segundos.
 
 10. Una vez registrados, podemos efectuar una llamada. Vamos a probar
 con el servicio de eco de Ekiga que nos permite comprobar si nos
