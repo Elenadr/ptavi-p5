@@ -204,8 +204,11 @@ Para asegurar que llegan, porque UDP como bien sabemos es un protocolo No Fiable
 
 16. Finalmente, se cierra la aplicación de VozIP.
 * ¿Por qué aparece una instrucción SIP del tipo REGISTER?
+Porque se envía el campo Expires con valor cero para cerrar la sesión.
 * ¿En qué trama sucede esto?
+Sucede en la trama 950.
 * ¿En qué se diferencia con la instrucción que se utilizó con anterioridad (al principio de la sesión)?
+En el campo Expires. Porque el principio tiene un valor mayor, y en esta instrucción el valor es cero.
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 
 Captura de una sesión SIP
