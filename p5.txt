@@ -187,7 +187,12 @@ Sí, el valor del retardo aumenta respecto al paquete anterior.
 llamada de voz IP capturada en una ventana emergente. Selecciona
 esa llamada y pulsa el botón Graph.
 * ¿Cuánto dura la conversación?
+La conversación dura 24.80289 segundos (39.229683 - 14.426793 = 24.80289 s).
 * ¿Cuáles son sus SSRC? ¿Por qué hay varios SSRCs? ¿Hay CSRCs?
+    H.261 (video) aparece como SSRC: Synchronization Source identifier: 0x43306582 (1127245186)
+    G.711 (audio) tenemos Synchronization Source identifier: 0xbf4afd37 (3209362743)
+    Hay varios SSRC porque hay dos flujos (uno de video y otro de audio).
+    No hay CSRCs, ya que el campo Contributing source identifiers count está a cero.
 
 15. Identifica la trama donde se finaliza la conversación.
 * ¿Qué método SIP se utiliza?
