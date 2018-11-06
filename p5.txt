@@ -135,11 +135,19 @@ El primer INVITE pide Proxy Authentication Required, y el segundo no. Se debe a 
 
 11. Una vez conectado, estudia el intercambio de tramas.
 * ¿Qué protocolo(s) se utiliza(n)? ¿Para qué sirven estos protocolos?
+Se utilizan los protocolos RTP Y RTCP.
+ RTP (Real-Time Transport Protocol) es el protocolo básico de transporte que sirve para el tráfico multimedia en Internet en tiempo real y RTCP (Real Time Control Protocol) es un protocolo que sirve para proporcionar informacion de control sobre la calidad de transmisión.
 * ¿Cuál es el tamaño de paquete de los mismos?
+Para RTP son 214 bytes y para RTCP 102 bytes.
 * ¿Se utilizan bits de padding?
+No, no se utilizan bits de padding ya que este campo aparece como Falso.
 * ¿Cuál es la periodicidad de los paquetes (en origen; nota que la
 captura es en destino)?
+La periocidad de los paquetes es de 0.02 segundos aproximadamente.
 * ¿Cuántos bits/segundo se envı́an?
+8000 bytes/segundos.
+
+
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 
 12. Vamos a ver más a fondo el intercambio RTP. En Telephony hay una
