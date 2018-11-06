@@ -68,11 +68,16 @@ La dirección IP que devuelve el servicio de nombres es la 86.64.162.35
 
 6. A continuación, hay más de una docena de tramas TCP/HTTP.
 * ¿Podrı́as decir la URL que se está pidiendo?
+Esta pidiendo la URL http://ekiga.net/ip/
 * ¿Qué user agent (UA) la está pidiendo?
+El User-Agent: Ekiga\r\n
 * ¿Qué devuelve el servidor?
+El servidor devuelve: HTTP/1.1 200 OK.
 * Si lanzamos el navegador web, por ejemplo, Mozilla Firefox, y
 vamos a la misma URL, ¿qué recibimos? ¿Qué es, entonces, lo
 que está respondiendo el servidor?
+Si lanzamos en Mozilla recibimos la siguiente dirección IP: 212.128.254.147.
+P or lo que el servidor está respondiendo con una dirección IP pública. 
 
 7. Hasta la trama 45 se puede observar una secuencia de tramas del
 protocolo STUN.
