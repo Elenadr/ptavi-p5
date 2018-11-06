@@ -29,9 +29,12 @@ en el repositorio.
 con Ekiga, un cliente de VoIP para GNOME. Responde a las siguientes
 cuestiones:
 * ¿Cuántos paquetes componen la captura?
+La captura está compuesta por 954 paquetes.
 * ¿Cuánto tiempo dura la captura?
+La captura dura un total de 56.149345. Y se puede consultar en el campo Time del último paquete el 954.
 * ¿Qué IP tiene la máquina donde se ha efectuado la captura? ¿Se
 trata de una IP pública o de una IP privada? ¿Por qué lo sabes?
+Tiene la IP 192.168.1.34. Es una IP privada. Porque está entre las direcciones privadas 192.
 
 3. Antes de analizar las tramas, mira las estadı́sticas generales que aparecen en el menú de Statistics. En el apartado de jerarquı́a de protocolos (Protocol Hierarchy) se puede ver el porcentaje del tráfico
 correspondiente al protocolo TCP y UDP.
