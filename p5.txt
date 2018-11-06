@@ -123,10 +123,15 @@ hemos conectado correctamente. El servicio de eco tiene la dirección
 sip:500@ekiga.net. Veamos el INVITE de cerca.
 * ¿Puede verse el nombre del que efectúa la llamada, ası́ como su
 dirección SIP?
+Sí se pude ver tanto el nombre como su dirección SIP, que serían:
+From: "Gregorio Robles" <sip:grex@ekiga.net>
 * ¿Qué es lo que contiene el cuerpo de la trama? ¿En qué formato/protocolo está?
+Contiene una descripción de la sesión. Esta en SDP.
 * ¿Tiene éxito el primer intento? ¿Cómo lo sabes?
+No, no tiene éxito el primer intento. Porque no recibimos el 200 OK. Y además se vuelve a enviar el INVITE.
 * ¿En qué se diferencia el segundo INVITE más abajo del primero?
 ¿A qué crees que se debe esto?
+El primer INVITE pide Proxy Authentication Required, y el segundo no. Se debe a que el primero requiere identificación.
 
 11. Una vez conectado, estudia el intercambio de tramas.
 * ¿Qué protocolo(s) se utiliza(n)? ¿Para qué sirven estos protocolos?
