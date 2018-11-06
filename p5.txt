@@ -50,7 +50,11 @@ Graphs. La captura que estamos viendo incluye desde la inicialización
 (registro) de la aplicación hasta su finalización, con una llamada entremedias.
 * Filtra por sip para conocer cuándo se envı́an paquetes SIP. ¿En
 qué segundos tienen lugar esos envı́os?
+En el segundo 7(registro), en el 14 (llamada), en el 16(se repite la llamada), en el 37.5(BYE) y en el 55. 
 * Y los paquetes con RTP, ¿cuándo se envı́an?
+Se envían paquetes RTP delde el segundo 17 hasta los 40 segundos. Lo que sería durante la llamada.
+
+ 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 
 5. Analiza las dos primeras tramas de la captura.
