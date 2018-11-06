@@ -171,12 +171,17 @@ Estamos ante una conversación de calidad por los valores de jitter del audio.
 -> RTP -> Stream Analysis.
 * ¿Cuánto valen el delta y el jitter para el primer paquete que
 ha llegado?
+Los dos tienen valor cero.
 * ¿Podemos saber si éste es el primer paquete que nos han enviado?
+Sí, porque si nos situamos en el primer paquete de RTP vemos que comenzamos a contar a partir de él el jitter y el delta.
 * Los valores de jitter son menores de 10ms hasta un paquete
 dado. ¿Cuál?
+Hata el paquete 246. A partir del 247 son mayores.
 * ¿A qué se debe el cambio tan brusco del jitter?
+Es porque el valor de la delta (retardo) cambia de 24..03 ms a 554.74 ms.
 * ¿Es comparable el cambio en el valor de jitter con el del delta?
 ¿Cual es más grande?
+Sí, el valor del retardo aumenta respecto al paquete anterior. 
 
 14. En Telephony selecciona el menú VoIP calls. Verás que se lista la
 llamada de voz IP capturada en una ventana emergente. Selecciona
