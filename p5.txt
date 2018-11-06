@@ -196,8 +196,11 @@ La conversación dura 24.80289 segundos (39.229683 - 14.426793 = 24.80289 s).
 
 15. Identifica la trama donde se finaliza la conversación.
 * ¿Qué método SIP se utiliza?
+El método BYE.
 * ¿En qué trama(s)?
+En las tramas 924, 925, 927 y 933.
 * ¿Por qué crees que se envı́a varias veces?
+Para asegurar que llegan, porque UDP como bien sabemos es un protocolo No Fiable.
 
 16. Finalmente, se cierra la aplicación de VozIP.
 * ¿Por qué aparece una instrucción SIP del tipo REGISTER?
