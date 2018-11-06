@@ -40,8 +40,10 @@ Tiene la IP 192.168.1.34. Es una IP privada. Porque está entre las direcciones 
 correspondiente al protocolo TCP y UDP.
 * ¿Cuál de los dos es mayor? ¿Tiene esto sentido si estamos hablando
 de una aplicación que transmite en tiempo real?
+Es mayor UDP. Si es consistente, puesto que UDP no requiere establecimiento previo de conexión, asentimientos continuos ni control de flujo constante y al encontrarnos ante una aplicación en tiempo real, todas estas características son favorables.
 * ¿Qué otros protocolos podemos ver en la jerarquı́a de protocolos?
 ¿Cuales crees que son señal y cuales ruido?
+Podemos observar protocolo UDP, STUNT, SIP, RTP, RTCP, DNS, TCP, HTTP, ICMP, ARP.
 
 4. Observa por encima el flujo de tramas en el menú de Statistics en IO
 Graphs. La captura que estamos viendo incluye desde la inicialización
