@@ -230,17 +230,27 @@ Ekiga para ver todo el proceso3 .
 19. Observa las diferencias en el inicio de la conversación entre el entorno
 del laboratorio y el del ejercicio anterior4 :
 * ¿Se utilizan DNS y STUN? ¿Por qué?
+En nuestra captura no se utiliza STUN. 
+DNS aparece en nuestra captura, pero no interviene ya que estamos usando IPs privadas y no públicas.
 * ¿Son diferentes el registro y la descripción de la sesión?
+Sí.
 
 20. Identifica las diferencias existentes entre esta conversación y la conversación anterior:
 * ¿Cuántos flujos tenemos?
+Tenemos dos flujos de audio(SPEEX).
 * ¿Cuál es su periodicidad?
+
 * ¿Cuánto es el valor máximo del delta y los valores medios y
 máximo del jitter?
+Flujo enviado por 10.0.2.15 Max Delta 51.519ms, Max Jitter 11.776ms y Mean Jitter 8.721ms
+Flujo enviado po 212.79.111.155 Max Delta 702.986ms, Max Jitter 51.952ms y Mean Jitter 0.959ms
+
 * ¿Podrı́as reproducir la conversación desde Wireshark? ¿Cómo?
 Comprueba que poniendo un valor demasiado pequeño para el
 buffer de jitter, la conversación puede no tener la calidad necesaria.
+Se puede reproducir con la opción Telephony, VoipCalls, PlayStream.
 * ¿Sabrı́as decir qué tipo de servicio ofrece sip:500@ekiga.net?
+Servicio de Eco.
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 
 
@@ -248,4 +258,3 @@ buffer de jitter, la conversación puede no tener la calidad necesaria.
 paquetes SIP como p5.pcapng. Abre el fichero guardado para cerciorarte de que lo has hecho bien. Deberás añadirlo al repositorio.
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 [Al terminar la práctica, realiza un push para sincronizar tu repositorio GitHub]
-
